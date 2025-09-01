@@ -1,80 +1,95 @@
-/* Corpo */
 body {
     background-color: #e0faff;
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
-    text-align: center;
+    color: #333;
 }
 
-/* Título */
+.title {
+    text-align: center;
+    padding: 20px;
+    background: #aeecea;
+    border-bottom: 3px solid #7cd3cf;
+}
+
 .title h1 {
-    margin: 20px 0;
+    margin-bottom: 15px;
 }
 
-/* Links do menu */
-.link {
-    text-align: center;
-    margin: 10px 0;
-}
-
-.link li {
+.menu {
     list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
     display: inline-block;
-    margin: 5px;
+    margin: 0 8px;
 }
 
-a:link, a:visited {
-    color: black;
-    padding: 8px 15px;
+.menu a {
     text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 8px 15px;
     border-radius: 6px;
-    transition: background-color 0.3s ease;
-    background: rgba(174,238,234,0.5);
+    transition: 0.3s;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-a:hover, a:active {
-    background-color: rgba(148,148,233,1);
+.menu a:hover {
+    background: #7cd3cf;
     color: white;
 }
 
-/* Seções */
-section {
-    margin: 40px auto;
-    max-width: 800px;
-    padding: 10px;
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
 
-/* Imagens responsivas */
-.car img {
+.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.card p {
+    margin-top: 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.card img {
     max-width: 100%;
     height: auto;
-    display: block;
-    margin: 10px auto;
-    border-radius: 10px;
+    border-radius: 8px;
+    margin: 10px 0;
 }
 
-/* Responsividade */
+/* Responsivo */
 @media (max-width: 768px) {
-    .title h1 {
-        font-size: 1.6rem;
-    }
-    a:link, a:visited {
+    .menu li {
         display: block;
-        margin: 8px auto;
-        width: 80%;
+        margin: 8px 0;
     }
 }
 
-@media (max-width: 480px) {
-    .title h1 {
-        font-size: 1.3rem;
-    }
-    a:link, a:visited {
-        font-size: 0.9rem;
-        padding: 6px 10px;
-        width: 100%;
-    }
-}
+
 
 
